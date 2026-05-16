@@ -18,8 +18,8 @@ export const AuthProvider = ({
 
   const [loading, setLoading] =
     useState(true);
+  
 
-    
   const fetchUser = async () => {
     try {
       const response = await fetch(
