@@ -12,7 +12,10 @@ env.config();
 
 const app = express();
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: [
+        'http://localhost:5173',
+        'https://another-1-v68f.onrender.com'
+    ],
     credentials: true,
 }));
 app.use(express.json());
