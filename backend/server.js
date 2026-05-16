@@ -8,6 +8,7 @@ const authRoutes = require('./routes/authRoutes');
 const cartRoutes = require('./routes/cartRoutes');
 
 
+
 env.config();
 
 const app = express();
