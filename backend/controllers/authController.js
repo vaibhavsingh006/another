@@ -70,11 +70,10 @@ exports.loginUser = async (req, res) => {
     const token = generateToken(user._id);
 
     res.cookie("token", token, {
-      httpOnly: true,
-      secure: false,
-      sameSite: "lax",
-      path: "/",
-    });
+    httpOnly: true,
+    secure: true,
+    sameSite: "none",
+});
 
     res.status(200).json({
       message: "Login Successful",

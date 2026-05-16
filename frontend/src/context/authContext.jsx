@@ -4,6 +4,8 @@ import {
   useEffect,
   useState,
 } from "react";
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+
 import { logoutUser } from "../services/api";
 
 const AuthContext = createContext();
@@ -20,7 +22,7 @@ export const AuthProvider = ({
   const fetchUser = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/me",
+        `${BASE_URL}/auth/me`,
         {
           credentials: "include",
         }

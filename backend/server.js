@@ -15,9 +15,10 @@ const app = express();
 app.use(cors({
     origin: [
         'http://localhost:5173',
-        'https://another-1-v68f.onrender.com'
+        'https://famous-daifuku-c1a435.netlify.app',
     ],
     credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
